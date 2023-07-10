@@ -15,11 +15,11 @@ export default function Tray({ setSelectRestaurant }) {
         <View style={styles.tray}>
             <View style={styles.buttonList}>
                 <TouchableOpacity onPress={choose} style={styles.button}> 
-                    <Text style={styles.buttonText}>Shuffle</Text>
+                    <Text style={styles.buttonText}>Shuffle Now 🎲</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity onPress={clear} style={styles.resetButton}>
-                    <Text style={styles.buttonText}>Reset</Text>
+                <TouchableOpacity onPress={clear} style={[styles.button, styles.resetButton]}>
+                    <Text style={styles.resetButtonText}>Reset</Text>
                 </TouchableOpacity>
             </View >
         </View >
@@ -28,45 +28,59 @@ export default function Tray({ setSelectRestaurant }) {
 
 const styles = StyleSheet.create ({
     buttonList: {
-        width: '80%',
+        width: '90%',
         flexDirection: 'row',
         justifyContent: 'space-evenly',
     },
 
     button: {
-        backgroundColor: '#9370db',
+        backgroundColor: '#ed714d',
         paddingHorizontal: 24,
         paddingVertical: 8,
-        borderRadius: 4,
+        borderRadius: 16,
+        borderWidth: 2,
         borderStyle: 'solid',
-        borderWidth: 1,
-        borderColor: 'black',
+        borderColor: '#f79477',
     },
 
     resetButton: {
-        backgroundColor: 'grey',
+        backgroundColor: '#f4f5f6',
         paddingHorizontal: 24,
         paddingVertical: 8,
-        borderRadius: 4,
-        borderStyle:'solid',
+        borderRadius: 16,
         borderWidth: 1,
-        borderColor: 'black',
+        borderStyle:'solid',
+        borderColor: '#f79477',
+    },
 
+    resetButtonText: {
+        color: '#777',
+        fontSize: 20,
+        fontWeight: 800,
     },
 
     buttonText: {
         color: 'white',
         fontSize: 20,
         fontWeight: 800,
-
     },
 
     tray: {
         width: "100%",
-        height: 70,
         backgroundColor: "#e9eeff",
+        height: 120,
+        paddingTop: 30,
+        paddingBottom: 30,
         alignItems: 'center',
         justifyContent: 'center',
-        paddingBottom: 10,
+
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: -10,
+        },
+        shadowOpacity: 0.11,
+        shadowRadius: 12.51,
+        elevation: 15, 
     }
 })
