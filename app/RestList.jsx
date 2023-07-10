@@ -21,7 +21,7 @@ export default function RestList({ selectRestaurant }) {
         } else {
             setChosenRestaurant()
         }
-    }, [])
+    }, [selectRestaurant] )
 
     return(
         <>
