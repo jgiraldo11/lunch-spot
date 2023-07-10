@@ -1,10 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import RestList from './app/RestList';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text style={styles.header}>
+        Lunch Spot
+        </Text>
+        <RestList />
       <StatusBar style="auto" />
     </View>
   );
@@ -13,8 +17,13 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    paddingTop: 60,
+    backgroundColor: '#2262fe',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
   },
+  header: {
+    color: 'white',
+    fontSize: 36,
+  }
 });
